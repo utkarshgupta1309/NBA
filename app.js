@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 app.use(express.urlencoded({extended: true}));
 const morgan = require('morgan')
-const port = 3000
+const port = process.env.PORT || 5000;
 
 const mongoose = require('mongoose');
 const dbURI = 'mongodb+srv://admin:admin@cluster0.yh2vu.mongodb.net/NBA?retryWrites=true&w=majority';
