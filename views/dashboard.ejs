@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <h4>Welcome <%= user.name%></h4> 
+    <h3>Medical Records</h2>
+    <%if(user.medicalRecord){%>    
+    <div class="single">
+        <h5>Name of the Doctor: <%= user.medicalRecord.doctorName %></h5>
+        <h5>Disease: <%= user.medicalRecord.disease %></h5>
+        <h5>Medicines Prescribed: <%= user.medicalRecord.medicineName %></h5>
+    </div>
+    <%} else{ %>
+        <h4>No Record Found</h4>
+    <% } %>    
+     <input type="button" class = "btn" onclick = "location.href = '/medical-records/login/createRecord/ <%= user._id %>'" value = "Add a new Record" >     
+</body>
+</html>

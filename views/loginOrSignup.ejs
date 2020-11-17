@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Signup</title>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <div class="container-center">
+        <img class="mb-1" src="/img/loginlogo.png" alt="" width="200" height="200">
+        <input class="btn" type="button" onclick = "window.location.href='/medical-records/login'" value="Login">
+        <input class = "btn" type="button" onclick = "window.location.href='/medical-records/signup'" value="Sign Up">
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <form method="post" class="container-center" action="/complaints/create">
+    <h2>Register a new Complaint</h2>    
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" for="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="details">Complaint Details</label>
+            <textarea name="details"  rows="8" cols="70"  required></textarea>
+        </div>
+        <div  class="left">
+            <label for="anonymous">Anonymous</label>
+            <input type="checkbox" name="anonymous" value=true>
+        </div>
+        <button type="submit" class="btn"> submit</button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    
+    <div class="container-center">
+        <h2>Create new record</h2>
+        <form action="<%= id %>" method="POST" >
+            <label for="doctorName">Enter Doctors name</label><br>
+            <input type="text" name="doctorName" ><br>
+            <label for="disease">Disease</label><br>
+            <input type="text" name="disease"><br>
+            <label for="mname">Enter Medicines Prescriped</label><br>
+            <input type="text" name="medicineName"><br><br>
+            <input type="submit" class="btn">
+        </form>
+    </div>
+
+</body>
+</html>
